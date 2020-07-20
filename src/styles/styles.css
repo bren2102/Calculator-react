@@ -1,15 +1,36 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  padding: 0;
 }
 
 #root {
   width: 700px;
 }
 
-.app,
-.display,
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+  height: 100px;
+  padding: 20px 10px;
+  align-items: flex-end;
+  font-size: 45px;
+  justify-content: center;
+}
+
 .buttonPanel {
   display: flex;
   flex-direction: column;
+}
+
+.button {
+  height: 100px;
 }
