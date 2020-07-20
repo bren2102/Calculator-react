@@ -1,10 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Button } from './Button';
+import { Display } from './Display';
 import { ButtonPanel } from './ButtonPanel'; 
 
-class App extends React.Component {
-  render () {
-    return {}
-  }
+const App = () => {
+  return (
+    <div>
+      <Display />
+      <ButtonPanel />
+    </div>
+  )
 }
