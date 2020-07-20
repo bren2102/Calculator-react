@@ -31,6 +31,7 @@
   flex-direction: column;
 }
 
-.button {
-  height: 100px;
+.buttonPanel > * {
+  width: 100%;
+  display: flex;
 }
