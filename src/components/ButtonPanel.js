@@ -3,7 +3,7 @@ import React from 'react';
 import Button from './Button';
 
 const ButtonPanel = () => (
-  <div>
+  <div className='buttonPanel'>
     <div>
       <Button name="AC" />
       <Button name="+/-" />

@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 700px;
+}
+
+.app,
+.display,
+.buttonPanel {
+  display: flex;
+  flex-direction: column;
+}
