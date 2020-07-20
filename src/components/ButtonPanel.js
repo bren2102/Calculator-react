@@ -3,7 +3,7 @@ import React from 'react';
 import Button from './Button';
 
 const ButtonPanel = () => (
-  <div className='buttonPanel'>
+  <div className="buttonPanel">
     <div>
       <Button name="AC" color="#e0e0e0" />
       <Button name="+/-" color="#e0e0e0" />
@@ -29,7 +29,7 @@ const ButtonPanel = () => (
       <Button name="+" />
     </div>
     <div>
-      <Button name="0" color="#e0e0e0" twice='true'/>
+      <Button name="0" color="#e0e0e0" twice="true" />
       <Button name="." color="#e0e0e0" />
       <Button name="=" />
     </div>

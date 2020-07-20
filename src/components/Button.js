@@ -6,10 +6,10 @@ const Button = props => {
   const { name, color, twice } = props;
   const styling = {
     background: color,
-    width: twice? '50%':'25%',
+    width: twice ? '50%' : '25%',
   };
   return (
-    <button type="button" className='button' style={ styling }>
+    <button type="button" className="button" style={styling}>
       { name }
     </button>
   );
