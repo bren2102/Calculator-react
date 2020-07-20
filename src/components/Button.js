@@ -16,7 +16,7 @@ const Button = props => {
 };
 Button.propTypes = {
   name: PropTypes.string,
-  color: 'orange',
+  color: '#f5913e',
   twice: false,
 };
 Button.defaultProps = {
