@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = (props) => {
+export const Button = (props) => {
   return (
-    <div>
+    <button type="button">
       { props.name }
-    </div>
+    </button>
   )
-}
+};
 
 Button.propTypes = {
   name: PropTypes.string,
