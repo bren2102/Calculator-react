@@ -35,3 +35,15 @@
   width: 100%;
   display: flex;
 }
+
+.buttonPanel div:last-child :first-child {
+  width: 50%;
+}
+
+.button {
+  height: 100px;
+  width: 25%;
+  border: 2px solid lightgray;
+  font-size: 30px;
+  color: black;
+}
