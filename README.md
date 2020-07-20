@@ -1,4 +1,4 @@
-# Restaurant Page
+# React-Calculator
 
 > This project is a calculator for Math-magicians Inc, It was built using create-react-app, a tool built by developers at Facebook to help build React applications, saving you from time-consuming setup and configuration.
 
