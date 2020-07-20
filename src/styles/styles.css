@@ -36,10 +36,6 @@
   display: flex;
 }
 
-.buttonPanel div:last-child :first-child {
-  width: 50%;
-}
-
 .button {
   height: 100px;
   width: 25%;
