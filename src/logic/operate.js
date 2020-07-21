@@ -1,6 +1,5 @@
-/* eslint-disable */
-import Big from './big.mjs';
-/* eslint-enable */
+import Big from 'big.js';
+
 const Operate = (numberOne, numberTwo, operation) => {
   const nOne = Big(numberOne);
   const nTwo = Big(numberTwo);
