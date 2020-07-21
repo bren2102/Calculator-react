@@ -3,10 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = props => {
-  const { name, color, twice } = props;
+  const { name, color, wide } = props;
   const styling = {
     background: color,
-    width: twice ? '50%' : '25%',
+    width: wide ? '50%' : '25%',
   };
   return (
     <button type="button" className="button" style={styling}>
@@ -16,13 +16,13 @@ const Button = props => {
 };
 Button.propTypes = {
   name: PropTypes.string,
-  color: '#f5913e',
-  twice: false,
+  color: PropTypes.string,
+  wide: PropTypes.bool,
 };
 Button.defaultProps = {
   name: 'name',
   color: '#f5913e',
-  twice: false,
+  wide: false,
 };
 
 export default Button;
