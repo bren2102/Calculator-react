@@ -10,68 +10,80 @@ const Calculate = (prop, buttonName) => {
         operation: null,
       };
     case '+/-':
-      if(next) {
+      if (next) {
         return {
           total,
           next: next * (-1),
           operation,
         };
-      } else {
-        return {
-          total: total * (-1),
-          next,
-          operation,
-        }
       }
-    case '=': {
-      if(next) {
+      return {
+        total: total * (-1),
+        next,
+        operation,
+      };
+    case '.':
+      if (next) {
+        return {
+          total: `${total}.`,
+          next: `${next}.`,
+          operation: null,
+        };
+      } if (total && !next) {
+        return {
+          total: `${total}.`,
+          next: null,
+          operation: null,
+        };
+      }
+      break;
+    case '=':
+      if (next) {
         return {
           total: Operate(total, next, operation),
           next,
           operation: null,
         };
-      } if(total && !next && !operation) {
+      } if (total && !next && !operation) {
         return {
           total,
           next: null,
           operation: null,
         };
-      } if(!total && !next && !operation) {
+      } if (!total && !next && !operation) {
         return {
           total: '0',
           next: null,
           operation: null,
-        }
+        };
       }
-    }
+      break;
     case '%':
-      if(next) {
+      if (next) {
         return {
           total: Operate(total, next, operation),
           next,
           operation,
         };
-      } else {
-        return {
-          total: total / 100,
-          next: null,
-          operation: null,
-        }
       }
+      return {
+        total: total / 100,
+        next: null,
+        operation: null,
+      };
     case '÷':
-      if(next) {
+      if (next) {
         return {
           total: Operate(total, next, operation),
           next,
           operation,
         };
-      } else {
-        return {
-          total: total,
-          next: null,
-          operation: null,
-        }
       }
+      return {
+        total,
+        next: null,
+        operation: null,
+      };
     case 'x':
       if (next) {
         return {
@@ -79,13 +91,12 @@ const Calculate = (prop, buttonName) => {
           next,
           operation,
         };
-      } else {
-        return {
-          total: total,
-          next: null,
-          operation: null,
-        }
       }
+      return {
+        total,
+        next: null,
+        operation: null,
+      };
     case '-':
       if (next) {
         return {
@@ -93,13 +104,12 @@ const Calculate = (prop, buttonName) => {
           next,
           operation,
         };
-      } else {
-        return {
-          total: total,
-          next: null,
-          operation: null,
-        }
       }
+      return {
+        total,
+        next: null,
+        operation: null,
+      };
     case '+':
       if (next) {
         return {
@@ -107,14 +117,20 @@ const Calculate = (prop, buttonName) => {
           next,
           operation,
         };
-      } else {
-        return {
-          total: total,
-          next: null,
-          operation: null,
-        }
       }
+      return {
+        total,
+        next: null,
+        operation: null,
+      };
+    default:
+      return '0';
   }
+  return {
+    total,
+    next,
+    operation,
+  };
 };
 
 export default Calculate;
