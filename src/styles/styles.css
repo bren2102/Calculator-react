@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+#root {
+  width: 700px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+  height: 100px;
+  padding: 20px 10px;
+  align-items: flex-end;
+  font-size: 45px;
+  justify-content: center;
+}
+
+.buttonPanel {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonPanel > * {
+  width: 100%;
+  display: flex;
+}
+
+.button {
+  height: 100px;
+  width: 25%;
+  border: 2px solid lightgray;
+  font-size: 30px;
+  color: black;
+}
