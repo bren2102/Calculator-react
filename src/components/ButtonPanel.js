@@ -29,7 +29,7 @@ const ButtonPanel = () => (
       <Button name="+" />
     </div>
     <div>
-      <Button name="0" color="#e0e0e0" twice="true" />
+      <Button name="0" color="#e0e0e0" wide="true" />
       <Button name="." color="#e0e0e0" />
       <Button name="=" />
     </div>
