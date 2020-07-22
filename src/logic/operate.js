@@ -11,15 +11,15 @@ const Operate = (numberOne, numberTwo, operation) => {
     case 'x':
       return (nOne.times(nTwo)).toString();
     case '÷':
-      if (nOne !== 0 && nTwo !== 0) {
+      if (nTwo !== 0) {
         return (nOne.div(nTwo)).toString();
       }
-      return '0';
+      return 'Error';
     case '%':
-      if (nOne !== 0 && nTwo !== 0) {
-        return ((nOne.div(100)).times(nTwo)).toString();
+      if (nTwo !== 0) {
+        return (nOne.div(100).times(nTwo)).toString();
       }
-      return '0';
+      return 'Error';
     default:
       return 'Error';
   }
