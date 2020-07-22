@@ -132,5 +132,10 @@ const Calculate = (prop, buttonName) => {
     operation,
   };
 };
+Calculate.defaultProps = {
+  total: null,
+  next: null,
+  operation: null,
+};
 
 export default Calculate;
