@@ -11,20 +11,25 @@ class App extends React.Component {
       total: null,
       next: null,
       operation: null,
-    }
+    };
   }
-  handleClick (buttonName) {
+
+  handleClick(buttonName) {
     const calc = Calculate(this.state, buttonName);
     this.setState(calc);
   }
+
   render() {
-    const value = this.state.operation? this.state.next:this.state.total;
+    /* eslint-disable */
+    const value = this.state.operation ? this.state.next : this.state.total;
+   /* eslint-enable */
     return (
-    <div className="app">
-      <Display result={value}/>
-      <ButtonPanel clickHandler={this.handleClick}/>
-    </div>
-  )}
+      <div className="app">
+        <Display result={value} />
+        <ButtonPanel clickHandler={this.handleClick} />
+      </div>
+    );
+  }
 }
 
 export default App;

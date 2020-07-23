@@ -3,13 +3,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = props => {
-  const { name, color, wide, clickHandler } = props;
+  const {
+    name, color, wide, clickHandler,
+  } = props;
   const styling = {
     background: color,
     width: wide ? '50%' : '25%',
   };
   return (
-    <button type="button" className="button" style={styling} onClick={()=>clickHandler(name)}>
+    <button type="button" className="button" style={styling} onClick={() => clickHandler(name)}>
       { name }
     </button>
   );

@@ -1,9 +1,9 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
 
 import Button from './Button';
-import { checkPropTypes } from 'prop-types';
 
-const ButtonPanel = ({clickHandler}) => (
+const ButtonPanel = ({ clickHandler }) => (
   <div className="buttonPanel">
     <div>
       <Button name="AC" color="#e0e0e0" clickHandler={clickHandler} />
@@ -36,6 +36,8 @@ const ButtonPanel = ({clickHandler}) => (
     </div>
   </div>
 );
-
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
+};
 
 export default ButtonPanel;
