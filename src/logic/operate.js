@@ -17,7 +17,7 @@ const Operate = (numberOne, numberTwo, operation) => {
       return 'Error';
     case '%':
       if (nTwo !== 0) {
-        return (nOne.div(100).times(nTwo)).toString();
+        return (nOne.mod(nTwo)).toString();
       }
       return 'Error';
     default:
