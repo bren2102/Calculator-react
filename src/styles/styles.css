@@ -43,3 +43,7 @@
   font-size: 30px;
   color: black;
 }
+
+.button:hover {
+  cursor: pointer;
+}
