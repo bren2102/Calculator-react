@@ -11,17 +11,19 @@ const Operate = (numberOne, numberTwo, operation) => {
     case 'x':
       return (nOne.times(nTwo)).toString();
     case '÷':
-      if (nTwo !== 0) {
-        return (nOne.div(nTwo)).toString();
+      /* eslint-disable */
+      if (nTwo == '0') {
+        return 'Undefined';
       }
-      return 'Error';
+      return (nOne.div(nTwo)).toString();
     case '%':
-      if (nTwo !== 0) {
-        return (nOne.mod(nTwo)).toString();
+      if (nTwo == '0') {
+        /* eslint-enable */
+        return 'Undefined';
       }
-      return 'Error';
+      return (nOne.mod(nTwo)).toString();
     default:
-      return 'Error';
+      return 'Undefined';
   }
 };
 export default Operate;

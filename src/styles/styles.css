@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+}
+
 #root {
   width: 700px;
 }

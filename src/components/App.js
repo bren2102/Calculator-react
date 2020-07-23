@@ -21,8 +21,11 @@ class App extends React.Component {
 
   render() {
     /* eslint-disable */
-    const value = this.state.operation ? this.state.next : this.state.total;
-   /* eslint-enable */
+    let total1 = this.state.total == null ? '' : this.state.total;
+    let next2 = this.state.next == null ? '' : this.state.next;
+    let op = this.state.operation == null ? '' : this.state.operation;
+    const value = total1 + ' ' + op + ' ' + next2;
+    /* eslint-enable */
     return (
       <div className="app">
         <Display result={value} />
