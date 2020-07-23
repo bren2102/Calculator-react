@@ -4,7 +4,7 @@ const Calculate = (prop, buttonName) => {
   let { total, next, operation } = prop;
   const number = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
   const operator = ['%', '÷', 'x', '-', '+'];
-  if (total === 'Error') {
+  if (total === 'Undefined' || !total) {
     total = null;
     next = null;
     operation = null;
@@ -21,18 +21,20 @@ const Calculate = (prop, buttonName) => {
       operation,
     };
   } if (operator.includes(buttonName)) {
-    if (next) {
+    if (next && operation) {
       return {
         total: Operate(total, next, operation),
-        next,
-        operation: buttonName,
-      };
-    } if (buttonName === '%') {
-      return {
-        total: total / 100,
         next: null,
         operation: buttonName,
       };
+    } if (buttonName === '%') {
+      if (!next) {
+        return {
+          total: total / 100,
+          next: null,
+          operation: null,
+        };
+      }
     }
     return {
       total,
@@ -83,7 +85,7 @@ const Calculate = (prop, buttonName) => {
         if (next) {
           return {
             total: Operate(total, next, operation),
-            next,
+            next: null,
             operation: null,
           };
         } if (total && !next && !operation) {
