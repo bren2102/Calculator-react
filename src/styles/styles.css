@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+}
+
 #root {
   width: 700px;
 }
@@ -42,4 +47,8 @@
   border: 2px solid lightgray;
   font-size: 30px;
   color: black;
+}
+
+.button:hover {
+  cursor: pointer;
 }
